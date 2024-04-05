@@ -27,8 +27,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
     fun onClick(view: View?) {
-        val Carrera: String = mensaje.getText().toString().trim { it <= ' ' }
+        val carrera: String = mensaje.text.toString().trim()
         val intent: Intent = Intent(this, MainActivity2::class.java)
+        intent.putExtra("carrera", carrera)
         startActivity(intent)
     }
 }

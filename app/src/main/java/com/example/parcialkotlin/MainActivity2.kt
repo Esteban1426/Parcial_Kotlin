@@ -16,12 +16,11 @@ class MainActivity2 : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main2)
 
-        val intent: Intent = getIntent()
-        val datoCarrera: TextView = findViewById<TextView>(R.id.datoCarrera)
+        var carreraRecibida = intent.getStringExtra("carrera")
 
-        val Carrera = intent.getStringExtra("Carrera:")
+        var datoCarrera: TextView = findViewById<TextView>(R.id.datoCarrera)
 
-        datoCarrera.text = Carrera
+        datoCarrera.text = carreraRecibida
 
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
